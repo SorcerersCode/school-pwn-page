@@ -1,3 +1,10 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color: white;
@@ -5,22 +12,54 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
+    position: relative;
+}
+
+.skull {
+    position: relative;
+    display: inline-block;
+}
+
+.skull img {
+    max-width: 300px;
+    filter: drop-shadow(0 0 20px red);
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.4);
+    filter: blur(20px);
+    z-index: -1;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: white;
-    margin-bottom: 0.5em;
+    margin-top: 20px;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
 }
 
-p {
+.message {
+    font-size: 1.5em;
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.signature {
     font-size: 1.2em;
     color: #ff0000;
+    margin-top: 5px;
+    font-style: italic;
 }
